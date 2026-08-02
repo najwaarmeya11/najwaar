@@ -8,3 +8,6 @@ New HelloBase.sol that returns a greeting message. Minimal contract to practice 
 feat: update HelloBase with customizable greeting
 
 Modified the contract to allow setting a custom greeting message. Makes it more flexible for testing on Base.
+feat: make HelloBase greeting persistent
+
+Stored the greeting in a state variable so it persists between calls. Ready for real interactions on Base Sepolia.

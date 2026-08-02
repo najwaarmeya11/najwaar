@@ -11,3 +11,6 @@ Modified the contract to allow setting a custom greeting message. Makes it more 
 feat: make HelloBase greeting persistent
 
 Stored the greeting in a state variable so it persists between calls. Ready for real interactions on Base Sepolia.
+docs: update README with HelloBase usage examples
+
+Added clear examples of how to call the greeting functions after deploying on Base Sepolia or Mainnet.

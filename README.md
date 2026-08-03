@@ -29,3 +29,42 @@ Created a clear step-by-step checklist for deploying and verifying the contract 
 feat: make HelloBase greetings updatable by owner only
 
 Restricted the update of greetings to the contract owner. Better access control for Base deployments.
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract HelloBase {
+    address public owner;
+    mapping(uint256 => string) public greetings;
+    uint256 public greetingCount;
+
+    event GreetingAdded(uint256 indexed id, string message);
+    event GreetingUpdated(uint256 indexed id, string message);
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not owner");
+        _;
+    }
+
+    constructor() {
+        owner = msg.sender;
+        greetings[0] = "Hello Base!";
+        greetingCount = 1;
+    }
+
+    function addGreeting(string calldata message) external onlyOwner {
+        greetings[greetingCount] = message;
+        emit GreetingAdded(greetingCount, message);
+        greetingCount++;
+    }
+
+    function updateGreeting(uint256 id, string calldata message) external onlyOwner {
+        require(id < greetingCount, "Invalid ID");
+        greetings[id] = message;
+        emit GreetingUpdated(id, message);
+    }
+
+    function getGreeting(uint256 id) external view returns (string memory) {
+        require(id < greetingCount, "Invalid ID");
+        return greetings[id];
+    }
+}

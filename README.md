@@ -26,3 +26,6 @@ Updated the contract to store and return different greeting messages based on an
 docs: add Base Sepolia deployment checklist for HelloBase
 
 Created a clear step-by-step checklist for deploying and verifying the contract on Base Sepolia.
+feat: make HelloBase greetings updatable by owner only
+
+Restricted the update of greetings to the contract owner. Better access control for Base deployments.

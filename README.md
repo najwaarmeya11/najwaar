@@ -17,3 +17,6 @@ Added clear examples of how to call the greeting functions after deploying on Ba
 feat: add owner transfer function to HelloBase
 
 Implemented a transferOwnership function following common patterns. Improves manageability of the contract on Base.
+refactor: improve gas efficiency in HelloBase
+
+Optimized storage layout and removed unnecessary operations. Makes the contract cheaper to use on Base.

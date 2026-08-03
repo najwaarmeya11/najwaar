@@ -14,3 +14,6 @@ Stored the greeting in a state variable so it persists between calls. Ready for 
 docs: update README with HelloBase usage examples
 
 Added clear examples of how to call the greeting functions after deploying on Base Sepolia or Mainnet.
+feat: add owner transfer function to HelloBase
+
+Implemented a transferOwnership function following common patterns. Improves manageability of the contract on Base.

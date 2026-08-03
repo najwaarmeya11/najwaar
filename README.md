@@ -23,3 +23,6 @@ Optimized storage layout and removed unnecessary operations. Makes the contract 
 feat: support multiple greetings in HelloBase
 
 Updated the contract to store and return different greeting messages based on an ID. More versatile for Base experiments.
+docs: add Base Sepolia deployment checklist for HelloBase
+
+Created a clear step-by-step checklist for deploying and verifying the contract on Base Sepolia.

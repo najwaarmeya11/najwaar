@@ -20,3 +20,6 @@ Implemented a transferOwnership function following common patterns. Improves man
 refactor: improve gas efficiency in HelloBase
 
 Optimized storage layout and removed unnecessary operations. Makes the contract cheaper to use on Base.
+feat: support multiple greetings in HelloBase
+
+Updated the contract to store and return different greeting messages based on an ID. More versatile for Base experiments.

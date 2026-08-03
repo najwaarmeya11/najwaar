@@ -98,3 +98,14 @@ contract Donation {
         payable(owner).transfer(address(this).balance);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract OwnershipClaimer {
+    address public owner;
+
+    function claim() external {
+        require(owner == address(0), "Already claimed");
+        owner = msg.sender;
+    }
+}

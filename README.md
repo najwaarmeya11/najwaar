@@ -109,3 +109,19 @@ contract OwnershipClaimer {
         owner = msg.sender;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Whitelist {
+    address public owner;
+    mapping(address => bool) public allowed;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function add(address user) external {
+        require(msg.sender == owner, "Not owner");
+        allowed[user] = true;
+    }
+}

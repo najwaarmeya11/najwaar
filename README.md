@@ -125,3 +125,13 @@ contract Whitelist {
         allowed[user] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract IDGenerator {
+    uint256 public nextId = 1;
+
+    function getNewId() external returns (uint256) {
+        return nextId++;
+    }
+}

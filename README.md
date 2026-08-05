@@ -158,3 +158,17 @@ contract BoolFlag {
         count--;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract OpenClose {
+    bool public isOpen = true;
+
+    function open() external {
+        isOpen = true;
+    }
+
+    function close() external {
+        isOpen = false;
+    }
+}

@@ -194,3 +194,15 @@ contract OwnerGreeter {
         greeting = _greeting;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MinMax {
+    uint256 public min = type(uint256).max;
+    uint256 public max;
+
+    function submit(uint256 value) external {
+        if (value < min) min = value;
+        if (value > max) max = value;
+    }
+}

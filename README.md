@@ -224,3 +224,13 @@ contract NameStorage {
         name = _name;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TextHolder {
+    string public text = "Base is based";
+
+    function set(string calldata _text) external {
+        text = _text;
+    }
+}

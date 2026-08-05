@@ -178,3 +178,19 @@ pragma solidity ^0.8.20;
 contract HelloWorld {
     string public greet = "Hello Base World!";
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract OwnerGreeter {
+    address public owner;
+    string public greeting = "gm Base";
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function setGreeting(string calldata _greeting) external {
+        require(msg.sender == owner, "Not owner");
+        greeting = _greeting;
+    }
+}

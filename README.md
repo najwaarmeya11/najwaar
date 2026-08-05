@@ -206,3 +206,11 @@ contract MinMax {
         if (value > max) max = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ZeroChecker {
+    function isZero(uint256 number) external pure returns (bool) {
+        return number == 0;
+    }
+}

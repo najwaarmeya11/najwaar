@@ -144,7 +144,16 @@ contract UpDownCounter {
     function increment() external {
         count++;
     }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
+contract BoolFlag {
+    bool public flag;
+
+    function toggle() external {
+        flag = !flag;
+    }
+}
     function decrement() external {
         count--;
     }

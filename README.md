@@ -135,3 +135,17 @@ contract IDGenerator {
         return nextId++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract UpDownCounter {
+    int256 public count;
+
+    function increment() external {
+        count++;
+    }
+
+    function decrement() external {
+        count--;
+    }
+}

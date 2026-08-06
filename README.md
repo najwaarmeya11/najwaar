@@ -268,3 +268,11 @@ contract AlwaysTrue {
         return true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BytesLength {
+    function getLength(bytes calldata data) external pure returns (uint256) {
+        return data.length;
+    }
+}

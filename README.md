@@ -276,3 +276,11 @@ contract BytesLength {
         return data.length;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StringComparer {
+    function isEqual(string calldata a, string calldata b) external pure returns (bool) {
+        return keccak256(abi.encodePacked(a)) == keccak256(abi.encodePacked(b));
+    }
+}

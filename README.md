@@ -323,3 +323,11 @@ contract AddressBalance {
         return addr.balance;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EmptyAddress {
+    function getZero() external pure returns (address) {
+        return address(0);
+    }
+}

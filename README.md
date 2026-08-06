@@ -315,3 +315,11 @@ contract MsgValueLogger {
         lastValue = msg.value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AddressBalance {
+    function getBalance(address addr) external view returns (uint256) {
+        return addr.balance;
+    }
+}

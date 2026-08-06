@@ -345,3 +345,13 @@ pragma solidity ^0.8.20;
 contract TrueConstant {
     bool public constant IS_TRUE = true;
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FixedOwner {
+    address public immutable owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+}

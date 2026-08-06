@@ -331,3 +331,11 @@ contract EmptyAddress {
         return address(0);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MsgSender {
+    function getSender() external view returns (address) {
+        return msg.sender;
+    }
+}

@@ -284,3 +284,17 @@ contract StringComparer {
         return keccak256(abi.encodePacked(a)) == keccak256(abi.encodePacked(b));
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract OwnerChecker {
+    address public owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function isOwner() external view returns (bool) {
+        return msg.sender == owner;
+    }
+}

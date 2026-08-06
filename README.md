@@ -305,4 +305,13 @@ contract AddressEqual {
     function isSame(address a, address b) external pure returns (bool) {
         return a == b;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MsgValueLogger {
+    uint256 public lastValue;
+
+    function log() external payable {
+        lastValue = msg.value;
+    }
 }

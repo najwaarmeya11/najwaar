@@ -234,3 +234,13 @@ contract TextHolder {
         text = _text;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TimestampSaver {
+    uint256 public savedTime;
+
+    function save() external {
+        savedTime = block.timestamp;
+    }
+}

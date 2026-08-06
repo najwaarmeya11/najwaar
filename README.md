@@ -363,3 +363,11 @@ contract One {
         return 1;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ZeroReturner {
+    function getZero() external pure returns (uint256) {
+        return 0;
+    }
+}

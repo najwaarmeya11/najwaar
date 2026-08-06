@@ -298,3 +298,11 @@ contract OwnerChecker {
         return msg.sender == owner;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AddressEqual {
+    function isSame(address a, address b) external pure returns (bool) {
+        return a == b;
+    }
+}

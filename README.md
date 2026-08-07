@@ -411,3 +411,11 @@ contract AddressHasher {
         return keccak256(abi.encodePacked(addr));
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StringToBytes {
+    function toBytes(string calldata text) external pure returns (bytes memory) {
+        return bytes(text);
+    }
+}

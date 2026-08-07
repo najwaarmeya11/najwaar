@@ -377,3 +377,13 @@ pragma solidity ^0.8.20;
 contract BaseChainId {
     uint256 public constant BASE_CHAIN_ID = 8453;
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BoolStorage {
+    bool public flag;
+
+    function set(bool value) external {
+        flag = value;
+    }
+}

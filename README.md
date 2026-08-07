@@ -403,3 +403,11 @@ contract PureAdder {
         return x + y;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AddressHasher {
+    function hash(address addr) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(addr));
+    }
+}

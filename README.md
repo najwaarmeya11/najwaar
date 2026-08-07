@@ -395,5 +395,11 @@ contract EventOnly {
 
     function call() external {
         emit Called(msg.sender);
+    }// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PureAdder {
+    function add(uint256 x, uint256 y) external pure returns (uint256) {
+        return x + y;
     }
 }

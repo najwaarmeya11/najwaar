@@ -435,3 +435,11 @@ contract Bytes32ToUint {
         return uint256(data);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StringHash {
+    function hash(string calldata text) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(text));
+    }
+}

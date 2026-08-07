@@ -459,3 +459,18 @@ contract RevertExample {
         revert("This always reverts");
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ReceiveFallback {
+    uint256 public receiveCount;
+    uint256 public fallbackCount;
+
+    receive() external payable {
+        receiveCount++;
+    }
+
+    fallback() external {
+        fallbackCount++;
+    }
+}

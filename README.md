@@ -443,3 +443,11 @@ contract StringHash {
         return keccak256(abi.encodePacked(text));
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TimestampNumber {
+    function combine(uint256 number) external view returns (uint256) {
+        return block.timestamp + number;
+    }
+}

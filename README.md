@@ -451,3 +451,11 @@ contract TimestampNumber {
         return block.timestamp + number;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RevertExample {
+    function fail() external pure {
+        revert("This always reverts");
+    }
+}

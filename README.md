@@ -387,3 +387,13 @@ contract BoolStorage {
         flag = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EventOnly {
+    event Called(address indexed caller);
+
+    function call() external {
+        emit Called(msg.sender);
+    }
+}

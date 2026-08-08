@@ -474,3 +474,14 @@ contract ReceiveFallback {
         fallbackCount++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EnumExample {
+    enum Status { Pending, Active, Closed }
+    Status public status;
+
+    function setActive() external {
+        status = Status.Active;
+    }
+}

@@ -570,3 +570,11 @@ contract CallExample {
         return success;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BytesConcat {
+    function concat(bytes calldata a, bytes calldata b) external pure returns (bytes memory) {
+        return bytes.concat(a, b);
+    }
+}

@@ -578,3 +578,11 @@ contract BytesConcat {
         return bytes.concat(a, b);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MemoryArray {
+    function create(uint256 size) external pure returns (uint256[] memory) {
+        return new uint256[](size);
+    }
+}

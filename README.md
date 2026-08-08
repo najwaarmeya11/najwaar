@@ -586,3 +586,13 @@ contract MemoryArray {
         return new uint256[](size);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EnumToUint {
+    enum State { Off, On, Standby }
+
+    function toUint(State s) external pure returns (uint256) {
+        return uint256(s);
+    }
+}

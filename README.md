@@ -553,3 +553,11 @@ contract GasPrice {
         return tx.gasprice;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MsgValueChecker {
+    function hasValue() external payable returns (bool) {
+        return msg.value > 0;
+    }
+}

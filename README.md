@@ -561,3 +561,12 @@ contract MsgValueChecker {
         return msg.value > 0;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CallExample {
+    function callContract(address target) external returns (bool) {
+        (bool success, ) = target.call("");
+        return success;
+    }
+}

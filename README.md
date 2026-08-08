@@ -493,3 +493,15 @@ contract MemoryExample {
         return text;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+abstract contract AbstractBase {
+    function getNumber() public pure virtual returns (uint256);
+}
+
+contract Concrete is AbstractBase {
+    function getNumber() public pure override returns (uint256) {
+        return 100;
+    }
+}

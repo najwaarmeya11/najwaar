@@ -525,3 +525,15 @@ contract ViewPure {
         return a + b;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+type Price is uint256;
+
+contract CustomType {
+    Price public price;
+
+    function setPrice(uint256 value) external {
+        price = Price.wrap(value);
+    }
+}

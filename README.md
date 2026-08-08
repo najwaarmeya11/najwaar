@@ -485,3 +485,11 @@ contract EnumExample {
         status = Status.Active;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MemoryExample {
+    function process(string memory text) external pure returns (string memory) {
+        return text;
+    }
+}

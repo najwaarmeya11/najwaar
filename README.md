@@ -640,3 +640,16 @@ contract PayableMix {
     function deposit() external payable {}
     function noValue() external pure {}
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ModifierState {
+    uint256 public count;
+
+    modifier increaseCount() {
+        count++;
+        _;
+    }
+
+    function doSomething() external increaseCount {}
+}

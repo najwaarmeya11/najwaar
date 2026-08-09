@@ -604,4 +604,13 @@ contract NamedReturns {
         number = 100;
         text = "Hello";
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ForLoop {
+    function sum(uint256 n) external pure returns (uint256 total) {
+        for (uint256 i = 1; i <= n; i++) {
+            total += i;
+        }
+    }
 }

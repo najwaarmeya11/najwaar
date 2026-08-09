@@ -653,3 +653,15 @@ contract ModifierState {
 
     function doSomething() external increaseCount {}
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract A {
+    function a() public pure returns (string memory) { return "A"; }
+}
+
+contract B {
+    function b() public pure returns (string memory) { return "B"; }
+}
+
+contract C is A, B {}

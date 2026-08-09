@@ -665,3 +665,19 @@ contract B {
 }
 
 contract C is A, B {}
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+library Adder {
+    function addOne(uint256 x) internal pure returns (uint256) {
+        return x + 1;
+    }
+}
+
+contract UsingFor {
+    using Adder for uint256;
+
+    function test(uint256 x) external pure returns (uint256) {
+        return x.addOne();
+    }
+}

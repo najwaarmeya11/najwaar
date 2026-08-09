@@ -596,3 +596,12 @@ contract EnumToUint {
         return uint256(s);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract NamedReturns {
+    function get() external pure returns (uint256 number, string memory text) {
+        number = 100;
+        text = "Hello";
+    }
+}

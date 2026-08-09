@@ -698,3 +698,13 @@ contract RequireMessage {
         require(condition, "Condition failed");
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ImmutableGas {
+    uint256 public immutable max;
+
+    constructor(uint256 _max) {
+        max = _max;
+    }
+}

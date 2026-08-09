@@ -625,3 +625,11 @@ contract ContinueExample {
         }
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Defaults {
+    uint256 public number;      // 0
+    bool public flag;           // false
+    address public addr;        // address(0)
+}

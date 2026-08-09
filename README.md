@@ -690,4 +690,11 @@ contract MultiIndexed {
     function transfer(address to, uint256 amount) external {
         emit Transfer(msg.sender, to, amount);
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RequireMessage {
+    function check(bool condition) external pure {
+        require(condition, "Condition failed");
+    }
 }

@@ -633,3 +633,10 @@ contract Defaults {
     bool public flag;           // false
     address public addr;        // address(0)
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PayableMix {
+    function deposit() external payable {}
+    function noValue() external pure {}
+}

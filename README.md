@@ -831,3 +831,19 @@ contract PausablePattern {
         paused = false;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract WhitelistPattern {
+    mapping(address => bool) public whitelist;
+    address public owner = msg.sender;
+
+    function add(address user) external {
+        require(msg.sender == owner, "Not owner");
+        whitelist[user] = true;
+    }
+
+    function isWhitelisted(address user) external view returns (bool) {
+        return whitelist[user];
+    }
+}

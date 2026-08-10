@@ -866,3 +866,18 @@ contract SimpleEscrow {
         payable(beneficiary).transfer(amount);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract YesNoVote {
+    mapping(address => bool) public hasVoted;
+    uint256 public yes;
+    uint256 public no;
+
+    function vote(bool support) external {
+        require(!hasVoted[msg.sender], "Already voted");
+        hasVoted[msg.sender] = true;
+        if (support) yes++;
+        else no++;
+    }
+}

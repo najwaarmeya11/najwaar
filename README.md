@@ -749,3 +749,11 @@ contract UintToString {
         return string(buffer);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract IsContractPure {
+    function isContract(address addr) external view returns (bool) {
+        return addr.code.length > 0;
+    }
+}

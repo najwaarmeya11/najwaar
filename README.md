@@ -783,4 +783,15 @@ contract MappingExists {
     function set(uint256 value) external {
         values[msg.sender] = value;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EnumMapping {
+    enum Role { None, User, Admin }
+
+    mapping(address => Role) public roles;
+
+    function setRole(Role role) external {
+        roles[msg.sender] = role;
+    }
 }

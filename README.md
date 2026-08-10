@@ -847,3 +847,22 @@ contract WhitelistPattern {
         return whitelist[user];
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SimpleEscrow {
+    address public depositor;
+    address public beneficiary;
+    uint256 public amount;
+
+    function deposit(address _beneficiary) external payable {
+        depositor = msg.sender;
+        beneficiary = _beneficiary;
+        amount = msg.value;
+    }
+
+    function release() external {
+        require(msg.sender == depositor, "Not depositor");
+        payable(beneficiary).transfer(amount);
+    }
+}

@@ -801,3 +801,11 @@ pragma solidity ^0.8.20;
 contract PayableFallback {
     fallback() external payable {}
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ExactValue {
+    function payExact() external payable {
+        require(msg.value == 0.01 ether, "Must send exactly 0.01 ETH");
+    }
+}

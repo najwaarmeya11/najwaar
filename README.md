@@ -770,3 +770,17 @@ contract ArrayMax {
         return m;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MappingExists {
+    mapping(address => uint256) public values;
+
+    function exists(address user) external view returns (bool) {
+        return values[user] != 0;
+    }
+
+    function set(uint256 value) external {
+        values[msg.sender] = value;
+    }
+}

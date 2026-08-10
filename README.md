@@ -809,3 +809,25 @@ contract ExactValue {
         require(msg.value == 0.01 ether, "Must send exactly 0.01 ETH");
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PausablePattern {
+    bool public paused;
+    address public owner = msg.sender;
+
+    modifier whenNotPaused() {
+        require(!paused, "Paused");
+        _;
+    }
+
+    function pause() external {
+        require(msg.sender == owner, "Not owner");
+        paused = true;
+    }
+
+    function unpause() external {
+        require(msg.sender == owner, "Not owner");
+        paused = false;
+    }
+}

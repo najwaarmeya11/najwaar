@@ -891,3 +891,12 @@ contract MintCounter {
         totalMinted += amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TransferEvent {
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    function fakeTransfer(address to, uint256 value) external {
+        emit Transfer(msg.sender, to, value);
+    }

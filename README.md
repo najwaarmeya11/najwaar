@@ -881,3 +881,13 @@ contract YesNoVote {
         else no++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MintCounter {
+    uint256 public totalMinted;
+
+    function mint(uint256 amount) external {
+        totalMinted += amount;
+    }
+}

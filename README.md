@@ -757,3 +757,16 @@ contract IsContractPure {
         return addr.code.length > 0;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ArrayMax {
+    function max(uint256[] calldata arr) external pure returns (uint256) {
+        require(arr.length > 0, "Empty array");
+        uint256 m = arr[0];
+        for (uint256 i = 1; i < arr.length; i++) {
+            if (arr[i] > m) m = arr[i];
+        }
+        return m;
+    }
+}

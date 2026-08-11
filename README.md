@@ -934,3 +934,11 @@ contract SaltedHash {
         return keccak256(abi.encodePacked(data, salt));
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SaltedHash {
+    function hash(bytes32 data, bytes32 salt) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(data, salt));
+    }
+}

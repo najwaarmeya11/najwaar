@@ -918,3 +918,11 @@ contract Deadline {
         return block.timestamp <= deadline;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PairHash {
+    function hash(uint256 a, uint256 b) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(a, b));
+    }
+}

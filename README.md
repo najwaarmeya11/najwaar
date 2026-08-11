@@ -910,3 +910,11 @@ contract DomainStyle {
         domainSeparator = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Deadline {
+    function isValid(uint256 deadline) external view returns (bool) {
+        return block.timestamp <= deadline;
+    }
+}

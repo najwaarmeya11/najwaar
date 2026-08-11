@@ -900,3 +900,13 @@ contract TransferEvent {
     function fakeTransfer(address to, uint256 value) external {
         emit Transfer(msg.sender, to, value);
     }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract DomainStyle {
+    bytes32 public domainSeparator;
+
+    function setDomain(bytes32 value) external {
+        domainSeparator = value;
+    }
+}

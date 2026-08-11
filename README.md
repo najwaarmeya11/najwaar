@@ -942,3 +942,11 @@ contract SaltedHash {
         return keccak256(abi.encodePacked(data, salt));
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SeedGenerator {
+    function getSeed() external view returns (bytes32) {
+        return keccak256(abi.encodePacked(blockhash(block.number - 1), msg.sender));
+    }
+}

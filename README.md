@@ -960,3 +960,13 @@ contract WinnerChecker {
         return number == winningNumber;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract WinnerChecker {
+    uint256 public winningNumber = 42;
+
+    function isWinner(uint256 number) external view returns (bool) {
+        return number == winningNumber;
+    }
+}
